@@ -1,0 +1,4 @@
+#!/bin/bash
+iptables-restore < /etc/myiptables
+sysctl -w net.ipv4.conf.wlan0.route_localnet=1
+

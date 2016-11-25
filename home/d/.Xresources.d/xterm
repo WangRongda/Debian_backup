@@ -1,0 +1,151 @@
+!--- general
+XTerm*termName: xterm-256color
+!XTerm.VT100.geometry:	80x40
+XTerm.VT100.geometry:	70x25
+XTerm*saveLines: 5000
+!XTerm*faceName: Mono 
+!XTerm*faceNameDoublesize: WenQuanYi Micro Hei Mono:antialias=false
+!XTerm*faceSize: 12
+XTerm*rightScrollBar: true
+!XTerm*scrollBar: true
+!XTerm*scaleHeight: 1.5
+
+
+
+!--- font and locale
+XTerm*locale: true
+xterm.utf8: true
+xterm.utf8Title: true
+!xterm*fontMenu*fontdefault*Label: Default
+xterm*faceSize: 13
+xterm*faceSize1: 8
+xterm*faceSize2: 11
+xterm*faceSize3: 12
+xterm*faceSize4: 14
+xterm*faceSize5: 15
+xterm*faceSize6: 16
+
+xterm*faceName: Monaco:antialias=True
+xterm*faceNameDoublesize: wenquanyi Micro Hei:antialias=True
+xterm*xftAntialias: true
+xterm*cjkWidth:false
+XTerm*renderFont: true
+
+
+
+!--- padding
+XTerm.VT100.internalBorder:10
+
+!--- colors
+!XTerm*reverseVideo: true
+!XTerm*cursorColor: magenta
+
+!--- scrolling
+XTerm*fastScroll: true
+XTerm*jumpScroll: true
+xTerm*multiScroll: true
+
+XTerm*allowScrollLock: true
+
+XTerm*scrollTtyOutput: false
+XTerm*scrollKey: true
+
+!---Alt+B/F ---
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+
+!--- selection
+XTerm.VT100.charClass: 33:48,35-38:48,43-47:48,58:48,61:48,63-64:48,126:48
+
+!--- keybindings
+!--- <Btn1Up>... for copy & paste
+XTerm*VT100.translations: #override \
+	<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+	Shift <Key>Up: scroll-back(1,line) \n\
+	Shift <Key>Down: scroll-forw(1,line) \n\
+	Ctrl Alt <Key>S: secure() \n\
+	Ctrl Alt <Key>H: print-everything() \n\
+	Ctrl Alt <Key>A: set-altscreen(toggle) \n\
+	Ctrl Shift <Key>N: spawn-new-terminal() \n\
+	Ctrl <Key>plus: larger-vt-font() \n\
+	Ctrl <Key>minus: smaller-vt-font()
+
+!XTerm*StringConversionWarnings: on
+
+
+XTerm*loginShell:	  True
+
+!XTerm.VT100.printAttributes: 2
+!XTerm.VT100.printerCommand: my_lpr
+
+!-------------------solarized----------
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+!xterm*background:            S_base03
+
+!xterm*background:              S_base03
+xterm*background:              #ffffff
+!xterm*foreground:              S_base0
+xterm*foreground:              #000000
+xterm*fading:                  40
+xterm*fadeColor:               S_base03
+xterm*cursorColor:             S_base1
+xterm*pointerColorBackground:  S_base01
+xterm*pointerColorForeground:  S_base1
+xterm*color0:                  S_base02
+xterm*color1:                  S_red
+xterm*color2:                  S_green
+xterm*color3:                  S_yellow
+xterm*color4:                  S_blue
+xterm*color5:                  S_magenta
+xterm*color6:                  S_cyan
+xterm*color7:                  S_base2
+xterm*color9:                  S_orange
+xterm*color8:                  S_base03
+xterm*color10:                 S_base01
+xterm*color11:                 S_base00
+xterm*color12:                 S_base0
+xterm*color13:                 S_violet
+xterm*color14:                 S_base1
+xterm*color15:                 S_base3
+
+dropdown*background:              #000000
+dropdown*foreground:              #ffffff
+
