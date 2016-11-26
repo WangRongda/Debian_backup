@@ -179,6 +179,7 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
+
     <!-- my start -->
     <keybind key="W-A-2">
       <action name="MoveResizeTo">
@@ -197,20 +198,16 @@
     <keybind key="W-F8">
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
+
+<!--- dropdown -->
     <keybind key="A-S">
       <action name="Execute">
 	<command>tdrop -a -w 1346 -h 400 -x 2 -y 2 -s dropdown "xterm -name dropdown"</command>
       </action>
     </keybind>
-<!--- dropdown -->
     <keybind key="A-J">
       <action name="Execute">
 	<command>wmctrl -r "tmux attach-session -dt dropdown" -b toggle,maximized_vert</command>
-      </action>
-    </keybind>
-    <keybind key="A-K">
-      <action name="ResizeRelative">
-        <bottom>-300</bottom>
       </action>
     </keybind>
 
@@ -226,63 +223,61 @@
         <focused>yes</focused>
       </action>
     </keybind>
-    <keybind key="S-A-h">
-      <action name="SendToDesktop">
-        <to>left</to>
-        <follow>no</follow>
-        <wrap>no</wrap>
+
+<!-- W-[k|j|h|l|KP_1-9|p|o|]: Active window move and resize in current workspace -->
+    <keybind key="W-K">
+      <action name="MoveRelative">
+        <y>-10</y>
+        <x>0</x>
       </action>
     </keybind>
-    <keybind key="S-A-l">
-      <action name="SendToDesktop">
-        <to>right</to>
-        <follow>no</follow>
-        <wrap>no</wrap>
+    <keybind key="W-J">
+      <action name="MoveRelative">
+        <y>10</y>
+        <x>0</x>
       </action>
     </keybind>
-    <keybind key="S-A-k">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <follow>no</follow>
-        <wrap>no</wrap>
+    <keybind key="W-H">
+      <action name="MoveRelative">
+        <y>0</y>
+        <x>-10</x>
       </action>
     </keybind>
-    <keybind key="S-A-j">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <follow>no</follow>
-        <wrap>no</wrap>
+    <keybind key="W-L">
+      <action name="MoveRelative">
+        <y>0</y>
+        <x>10</x>
       </action>
     </keybind>
-    <keybind key="W-Left">
+    <keybind key="W-KP_4">
       <action name="MoveResizeTo">
         <x>0</x>
         <width client="yes">50%</width>
         <height client="yes">100%</height>
       </action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="W-KP_6">
       <action name="MoveResizeTo">
         <x>-0</x>
         <width>50%</width>
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-Up">
+    <keybind key="W-KP_8">
       <action name="MoveResizeTo">
         <y>0</y>
         <width client="yes">100%</width>
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-Down">
+    <keybind key="W-KP_2">
       <action name="MoveResizeTo">
         <y>-0</y>
         <width client="yes">100%</width>
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-5">
+    <keybind key="W-KP_5">
       <action name="MoveResizeTo">
         <y>105</y>
         <x>290</x>
@@ -290,7 +285,7 @@
         <height client="yes">70%</height>
       </action>
     </keybind>
-    <keybind key="W-4">
+    <keybind key="W-KP_4">
       <action name="MoveResizeTo">
         <y>-0</y>
         <x>-0</x>
@@ -298,7 +293,7 @@
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-3">
+    <keybind key="W-KP_3">
       <action name="MoveResizeTo">
         <y>-0</y>
         <x>0</x>
@@ -306,7 +301,7 @@
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <keybind key="W-KP_2">
       <action name="MoveResizeTo">
         <y>0</y>
         <x>-0</x>
@@ -314,7 +309,7 @@
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-1">
+    <keybind key="W-KP_1">
       <action name="MoveResizeTo">
         <y>0</y>
         <x>0</x>
@@ -322,11 +317,8 @@
         <height client="yes">50%</height>
       </action>
     </keybind>
-    <keybind key="W-BackSpace">
-      <action name="MoveResizeTo">
-        <width client="yes">50%</width>
-        <height client="yes">65%</height>
-      </action>
+    <keybind key="W-D">
+      <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-p">
       <action name="ResizeRelative">
@@ -340,34 +332,168 @@
         <right>-20</right>
       </action>
     </keybind>
-    <keybind key="W-k">
-      <action name="MoveRelative">
-        <y>-10</y>
-        <x>0</x>
-      </action>
-    </keybind>
-    <keybind key="W-j">
-      <action name="MoveRelative">
-        <y>10</y>
-        <x>0</x>
-      </action>
-    </keybind>
-    <keybind key="W-h">
-      <action name="MoveRelative">
-        <y>0</y>
-        <x>-10</x>
-      </action>
-    </keybind>
-    <keybind key="W-l">
-      <action name="MoveRelative">
-        <y>0</y>
-        <x>10</x>
-      </action>
-    </keybind>
-    <keybind key="W-o">
+    <keybind key="W-O">
       <action name="ToggleDecorations"/>
     </keybind>
-    <!-- my end -->
+
+<!-- Crtl+W+[k|j|h|l|KP_1~4]: Switch WorkSpace -->
+    <keybind key="C-W-H">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-W-L">
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-W-K">
+      <action name="GoToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-W-J">
+      <action name="GoToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-W-KP_1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="C-W-KP_2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="C-W-KP_3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="C-W-KP_4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+
+<!-- Shift+Ctrl+W+[kjhl|KP_1~4]: Switch and send active window to WorkSpace N -->
+    <keybind key="S-C-W-H">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-L">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-K">
+      <action name="SendToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-J">
+      <action name="SendToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-KP_1">
+      <action name="SendToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-KP_2">
+      <action name="SendToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-KP_3">
+      <action name="SendToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-C-W-KP_4">
+      <action name="SendToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+<!-- Shift+W+[kjhl|KP_1~4]: Send active window to WorkSpace N but not follow(leave in curren workspace-->
+    <keybind key="S-W-H">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-L">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-K">
+      <action name="SendToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-J">
+      <action name="SendToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-KP_1">
+      <action name="SendToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-KP_2">
+      <action name="SendToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-KP_3">
+      <action name="SendToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="S-W-KP_4">
+      <action name="SendToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+	<follow>no</follow>
+      </action>
+    </keybind>
+
+<!-- my end -->
+
+
+<!--
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -436,9 +562,11 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-D">
       <action name="ToggleShowDesktop"/>
     </keybind>
+-->
+
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -453,6 +581,7 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
+
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
