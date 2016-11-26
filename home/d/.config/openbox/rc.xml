@@ -249,24 +249,11 @@
         <x>10</x>
       </action>
     </keybind>
-    <keybind key="W-KP_4">
+    <keybind key="W-KP_1">
       <action name="MoveResizeTo">
+        <y>-0</y>
         <x>0</x>
         <width client="yes">50%</width>
-        <height client="yes">100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_6">
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_8">
-      <action name="MoveResizeTo">
-        <y>0</y>
-        <width client="yes">100%</width>
         <height client="yes">50%</height>
       </action>
     </keybind>
@@ -275,6 +262,21 @@
         <y>-0</y>
         <width client="yes">100%</width>
         <height client="yes">50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="MoveResizeTo">
+        <y>-0</y>
+        <x>-0</x>
+        <width client="yes">50%</width>
+        <height client="yes">50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <width client="yes">50%</width>
+        <height client="yes">100%</height>
       </action>
     </keybind>
     <keybind key="W-KP_5">
@@ -285,34 +287,32 @@
         <height client="yes">70%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_4">
+    <keybind key="W-KP_6">
       <action name="MoveResizeTo">
-        <y>-0</y>
         <x>-0</x>
-        <width client="yes">50%</width>
-        <height client="yes">50%</height>
+        <width>50%</width>
+        <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_3">
-      <action name="MoveResizeTo">
-        <y>-0</y>
-        <x>0</x>
-        <width client="yes">50%</width>
-        <height client="yes">50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_2">
-      <action name="MoveResizeTo">
-        <y>0</y>
-        <x>-0</x>
-        <width client="yes">50%</width>
-        <height client="yes">50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_1">
+    <keybind key="W-KP_7">
       <action name="MoveResizeTo">
         <y>0</y>
         <x>0</x>
+        <width client="yes">50%</width>
+        <height client="yes">50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_8">
+      <action name="MoveResizeTo">
+        <y>0</y>
+        <width client="yes">100%</width>
+        <height client="yes">50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_9">
+      <action name="MoveResizeTo">
+        <y>0</y>
+        <x>-0</x>
         <width client="yes">50%</width>
         <height client="yes">50%</height>
       </action>
