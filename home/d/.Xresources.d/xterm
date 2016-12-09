@@ -6,10 +6,12 @@ XTerm*saveLines: 5000
 !XTerm*faceName: Mono 
 !XTerm*faceNameDoublesize: WenQuanYi Micro Hei Mono:antialias=false
 !XTerm*faceSize: 12
-XTerm*rightScrollBar: true
+!XTerm*rightScrollBar: true
 !XTerm*scrollBar: true
 !XTerm*scaleHeight: 1.5
 
+!--- icon
+xterm*iconPixmap: /home/d/.themes/Arc/openbox-3/max.xbm
 
 
 !--- font and locale

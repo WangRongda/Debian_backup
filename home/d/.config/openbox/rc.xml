@@ -42,8 +42,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Nightmare-02</name>
-    <titleLayout/>
+    <name>Arc</name>
+    <titleLayout>N</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -179,7 +179,6 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-
     <!-- my start -->
     <keybind key="W-A-2">
       <action name="MoveResizeTo">
@@ -198,33 +197,36 @@
     <keybind key="W-F8">
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
-
-<!--- dropdown -->
+    <!--- dropdown -->
     <keybind key="A-S">
       <action name="Execute">
-	<command>tdrop -a -w 1346 -h 400 -x 2 -y 2 -s dropdown "xterm -name dropdown"</command>
+        <command>tdrop -a -w 1346 -h 400 -x 2 -y 2 -s dropdown "xterm -name dropdown"</command>
       </action>
     </keybind>
     <keybind key="A-J">
       <action name="Execute">
-	<command>wmctrl -r "tmux attach-session -dt dropdown" -b toggle,maximized_vert</command>
+        <command>wmctrl -r "tmux attach-session -dt dropdown" -b toggle,maximized_vert</command>
       </action>
     </keybind>
-
     <keybind key="C-A-T">
       <action name="Execute">
         <command>xterm</command>
         <focused>yes</focused>
       </action>
     </keybind>
-    <keybind key="C-A-G">
+    <keybind key="C-A-F">
+      <action name="Execute">
+        <command>xterm +hold -e "firefox"</command>
+        <focused>yes</focused>
+      </action>
+    </keybind>
+    <keybind key="C-A-C">
       <action name="Execute">
         <command>xterm +hold -e "google-chrome-stable"</command>
         <focused>yes</focused>
       </action>
     </keybind>
-
-<!-- W-[k|j|h|l|KP_1-9|p|o|]: Active window move and resize in current workspace -->
+    <!-- W-[k|j|h|l|KP_1-9|p|o|]: Active window move and resize in current workspace -->
     <keybind key="W-K">
       <action name="MoveRelative">
         <y>-10</y>
@@ -335,8 +337,7 @@
     <keybind key="W-O">
       <action name="ToggleDecorations"/>
     </keybind>
-
-<!-- Crtl+W+[k|j|h|l|KP_1~4]: Switch WorkSpace -->
+    <!-- Crtl+W+[k|j|h|l|KP_1~4]: Switch WorkSpace -->
     <keybind key="C-W-H">
       <action name="GoToDesktop">
         <to>left</to>
@@ -381,8 +382,7 @@
         <to>4</to>
       </action>
     </keybind>
-
-<!-- Shift+Ctrl+W+[kjhl|KP_1~4]: Switch and send active window to WorkSpace N -->
+    <!-- Shift+Ctrl+W+[kjhl|KP_1~4]: Switch and send active window to WorkSpace N -->
     <keybind key="S-C-W-H">
       <action name="SendToDesktop">
         <to>left</to>
@@ -431,69 +431,65 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-
-<!-- Shift+W+[kjhl|KP_1~4]: Send active window to WorkSpace N but not follow(leave in curren workspace-->
+    <!-- Shift+W+[kjhl|KP_1~4]: Send active window to WorkSpace N but not follow(leave in curren workspace-->
     <keybind key="S-W-H">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-L">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-K">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-J">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-KP_1">
       <action name="SendToDesktop">
         <to>1</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-KP_2">
       <action name="SendToDesktop">
         <to>2</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-KP_3">
       <action name="SendToDesktop">
         <to>3</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
     <keybind key="S-W-KP_4">
       <action name="SendToDesktop">
         <to>4</to>
         <wrap>no</wrap>
-	<follow>no</follow>
+        <follow>no</follow>
       </action>
     </keybind>
-
-<!-- my end -->
-
-
-<!--
+    <!-- my end -->
+    <!--
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -566,7 +562,6 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
 -->
-
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -581,11 +576,15 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
         <command>scrot -s</command>
+      </action>
+    </keybind>
+    <keybind key="W-Print">
+      <action name="Execute">
+        <command>scrot</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -1030,14 +1029,21 @@
       <focus>no</focus>
       <desktop>2</desktop>
     </application>
+    <application class="XTerm" title="firefox">
+      <focus>no</focus>
+      <desktop>2</desktop>
+    </application>
     <application name="google-chrome">
       <focus>yes</focus>
       <desktop>4</desktop>
     </application>
-    <application name="dropdown" class="XTerm">
-       <layer>above</layer>
+    <application class="Firefox" name="Navigator">
+      <focus>yes</focus>
+      <desktop>4</desktop>
     </application>
-
+    <application name="dropdown" class="XTerm">
+      <layer>above</layer>
+    </application>
     <!-- my application end -->
     <!--
   # this is an example with comments through out. use these to make your

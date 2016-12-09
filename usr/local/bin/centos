@@ -1,1 +1,2 @@
-ssh d@www.wangrongda.cn $1
+#!/bin/bash
+ssh d@www.wangrongda.cn $*

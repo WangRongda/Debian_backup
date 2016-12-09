@@ -1,2 +1,2 @@
 #!/bin/bash
-google-chrome-stable --app="http://www.xiami.com"
+google-chrome-stable --app="http://www.xiami.com/play"

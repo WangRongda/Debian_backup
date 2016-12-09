@@ -119,29 +119,31 @@ dropdown*loginShell:	  True
 ! the color assignment statement with its name. Example:
 !
 !xterm*background:            S_base03
-
+!
 dropdown*background:       rgb:19/10/50
 dropdown*foreground:	rgb:ff/dd/71
-dropdown*fading:                  40
-dropdown*fadeColor:               S_base03
-dropdown*cursorColor:             S_base1
-dropdown*pointerColorBackground:  S_base01
-dropdown*pointerColorForeground:  S_base1
-dropdown*color0:                  S_base02
-dropdown*color1:                  S_red
-dropdown*color2:                  S_green
-dropdown*color3:                  S_yellow
-dropdown*color4:                  S_blue
-dropdown*color5:                  S_magenta
-dropdown*color6:                  S_cyan
-dropdown*color7:                  S_base2
-dropdown*color9:                  S_orange
-dropdown*color8:                  S_base03
-dropdown*color10:                 S_base01
-dropdown*color11:                 S_base00
-dropdown*color12:                 S_base0
-dropdown*color13:                 S_violet
-dropdown*color14:                 S_base1
-dropdown*color15:                 S_base3
+!dropdown*fading:                  40
+!dropdown*fadeColor:               S_base03
+!dropdown*cursorColor:             S_base1
+!dropdown*pointerColorBackground:  S_base01
+!dropdown*pointerColorForeground:  S_base1
+!dropdown*color0:                  S_base02
+!dropdown*color1:                  S_red
+!dropdown*color2:                  S_green
+!dropdown*color3:                  S_yellow
+!dropdown*color4:                  S_blue
+!dropdown*color5:                  S_magenta
+!dropdown*color6:                  S_cyan
+!dropdown*color7:                  S_base2
+!dropdown*color9:                  S_orange
+!dropdown*color8:                  S_base03
+!dropdown*color10:                 S_base01
+!dropdown*color11:                 S_base00
+!dropdown*color12:                 S_base0
+!dropdown*color13:                 S_violet
+!dropdown*color14:                 S_base1
+!dropdown*color15:                 S_base3
+!
+
 
 
