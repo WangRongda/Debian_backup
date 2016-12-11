@@ -1,5 +1,6 @@
 !--- general
 XTerm*termName: xterm-256color
+XTerm*visualBell: True
 !XTerm.VT100.geometry:	80x40
 XTerm.VT100.geometry:	70x25
 XTerm*saveLines: 5000
@@ -11,7 +12,7 @@ XTerm*saveLines: 5000
 !XTerm*scaleHeight: 1.5
 
 !--- icon
-xterm*iconPixmap: /home/d/.themes/Arc/openbox-3/max.xbm
+!xterm*iconPixmap: /home/d/.themes/Arc/openbox-3/max.xbm
 
 
 !--- font and locale
