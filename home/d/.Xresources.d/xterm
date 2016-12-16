@@ -1,6 +1,6 @@
 !--- general
 XTerm*termName: xterm-256color
-XTerm*visualBell: True
+!XTerm*visualBell: True
 !XTerm.VT100.geometry:	80x40
 XTerm.VT100.geometry:	70x25
 XTerm*saveLines: 5000
