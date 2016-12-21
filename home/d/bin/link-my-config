@@ -1,0 +1,12 @@
+#!/bin/bash
+linkItem=`ls ~/myconfig/link-to-~ -A`
+for each in $linkItem
+do
+	rm ~/$each -rf
+	ln -s ~/myconfig/link-to-~/$each ~/  
+done
+mv ~/openbox ~/.config 
+
+sudo cp  ~/myconfig/asus_nb_wmi.conf  /etc/modprobe.d
+sudo rm /etc/rc.local -rf
+sudo ln -s ~/myconfig/rc.local /etc/

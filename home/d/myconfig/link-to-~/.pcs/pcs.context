@@ -1,0 +1,15 @@
+{
+	"cookiefile":	"/home/d/.pcs/default.cookie",
+	"captchafile":	"/home/d/.pcs/captcha.gif",
+	"workdir":	"/mydebian",
+	"list_page_size":	20,
+	"list_sort_name":	"name",
+	"list_sort_direction":	"asc",
+	"secure_method":	"plaintext",
+	"secure_key":	"",
+	"secure_enable":	false,
+	"timeout_retry":	true,
+	"max_thread":	1,
+	"max_speed_per_thread":	0,
+	"max_upload_speed_per_thread":	0
+}

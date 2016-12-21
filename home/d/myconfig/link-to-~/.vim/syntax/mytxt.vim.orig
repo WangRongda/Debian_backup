@@ -1,0 +1,11 @@
+syn keyword mytxt	Class
+if has("ebcdic")
+  syn match mytxt	"\\\@<!|[^"*|]\+|" contains=helpBar
+else
+  syn match mytxt	"\\\@<!|mytxt|[#-)!+-~]\+|mytxt|" contains=helpBar
+endif
+if has("conceal")
+  syn match helpBar		contained "|mytxt|" conceal
+else
+  syn match helpBar		contained "|mytxt|"
+endif

@@ -1,0 +1,8 @@
+#!/bin/bash
+chmod a+x /home/d/bin/*
+binfile=`ls /home/d/bin/`
+for each in $binfile
+do
+    rm "/usr/local/bin/$each"
+    ln -s "/home/d/bin/$each" "/usr/local/bin"
+done

@@ -1,0 +1,46 @@
+###################
+##      GTK       #
+###################
+#
+#include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc"
+#
+#
+###################
+##     FONTS      #
+###################
+#
+#style "schrift"
+#{
+#font_name = "Myriad Web 9"
+#}
+#widget_class "*" style "schrift"
+#gtk-font-name = "Myriad Web 9"
+#
+#
+###################
+##     ICONS      #
+###################
+#
+#gtk-icon-theme-name = "Crashbit"
+#
+#
+###################
+##    TOOLBARS    #
+###################
+#
+#gtk-toolbar-style   = GTK_TOOLBAR_ICONS
+
+
+# my configure
+
+#gtk-can-change-accels = 1
+
+gtk-icon-theme-name = "Arc"
+gtk-theme-name = "Arc"
+
+style "my-gtk2-font"
+{
+        font_name="Sans 10"
+}
+widget_class "*" style "my-gtk2-font"
+gtk-font-name = "Sans 10"

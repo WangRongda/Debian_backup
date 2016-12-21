@@ -1,0 +1,21 @@
+# deb http://mirrors.163.com/debian/ jessie main
+
+deb http://mirrors.163.com/debian/ jessie main
+deb-src http://mirrors.163.com/debian/ jessie main
+
+deb http://security.debian.org/ jessie/updates main
+deb-src http://security.debian.org/ jessie/updates main
+
+# jessie-updates, previously known as 'volatile'
+deb http://mirrors.163.com/debian/ jessie-updates main
+deb-src http://mirrors.163.com/debian/ jessie-updates main
+
+# for infinality
+deb http://download.opensuse.org/repositories/home:/BubuXP:/Infinality/Debian_8.0/ ./
+
+#for nvidia // apt-get -t jessie-backports bumblebee-nvidia
+# jessie-backports
+#deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+
+#arc-theme
+deb http://download.opensuse.org/repositories/home:/Horst3180/Debian_8.0/ /

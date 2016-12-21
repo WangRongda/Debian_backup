@@ -1,0 +1,21 @@
+#!/bin/bash
+if [[ "$1" == "" ]];then
+	echo "Usage: $0 'xxx xxx'"
+	exit 0
+else
+	tmpfile='/tmp/apt-myremove.txt'
+	echo "$*" > $tmpfile
+	sed -i 's/:amd64 //g' $tmpfile
+	sed -i 's/([^)]*)//g' $tmpfile
+	sed -i 's/,//g' $tmpfile
+	removeitem=`cat $tmpfile`
+	echo "You will run \"dpkg --force-all --purge remove $removeitem\" "
+	read -p 'Dou you continue? (y/n) ' choice
+	if [[ "$choice" == "y" ]]
+	then
+		dpkg --force-all --purge remove $removeitem
+	else
+		echo operation cancel
+	fi
+fi
+rm $tmpfile
