@@ -1,0 +1,4 @@
+#!/bin/bash
+tmux save-buffer - | xclip -selection clipboard
+tmux save-buffer - | xclip -selection primary
+tmux save-buffer - | xclip -selection cut_buffer0

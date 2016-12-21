@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo /home/d/XX-Net-3.2.7/XX-Net-3.2.7/start
+/home/d/Downloads/XX-Net/start &

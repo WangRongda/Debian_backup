@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -e robots=off -p -r -np -c -L -k "$1"
